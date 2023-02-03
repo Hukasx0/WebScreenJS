@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebScreenJS</title>
+</head>
+<body>
+    <canvas id="mainCanvas" width="{screenWidth}" height="{screenHeight}"></canvas>
+    <script>
+        const canvas = document.getElementById('mainCanvas');
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+        img.src = '{source}';
+        img.onload = function() {
+            ctx.drawImage( img, 0, 0);
+        }
+    </script>
+</body>
+</html>
