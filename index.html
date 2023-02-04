@@ -5,16 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebScreenJS</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: powderblue;
+        }
+        #stream\.ssBtn{
+            background: none;
+            color: violet;
+            border: 3px dashed blueviolet;
+        }
+        #stream\.ssBtn:hover{
+            background: none;
+            color: red;
+            border: 3px solid red;
+        }
+    </style>
 </head>
 <body>
-    <img id="main" src="" width="{dispWidth}" height="{dispHeight}">
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
-    <script>
-        const image = document.getElementById('main');
-        const socket = io('http://localhost:3000');
-        socket.on('update', data => {
-            image.src = data;
-        });
-    </script>
+    <WebScreenJS id="stream.streamer"></WebScreenJS>
+    <br>
+    <WebScreenJS id="stream.ssBtn"></WebScreenJS>
 </body>
 </html>

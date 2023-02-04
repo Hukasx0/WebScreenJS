@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hukasx0",
   "license": "ISC",
   "dependencies": {
-      "screenshot-desktop": "^1.12.7",
-      "socket.io": "^4.5.4"
+    "screenshot-desktop": "^1.12.7",
+    "socket.io": "^4.5.4"
   }
 }
