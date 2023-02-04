@@ -7,15 +7,14 @@
     <title>WebScreenJS</title>
 </head>
 <body>
-    <canvas id="mainCanvas" width="{screenWidth}" height="{screenHeight}"></canvas>
+    <img id="main" src="" width="{dispWidth}" height="{dispHeight}">
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script>
-        const canvas = document.getElementById('mainCanvas');
-        const ctx = canvas.getContext('2d');
-        const img = new Image();
-        img.src = '{source}';
-        img.onload = function() {
-            ctx.drawImage( img, 0, 0);
-        }
+        const image = document.getElementById('main');
+        const socket = io('http://localhost:3000');
+        socket.on('update', data => {
+            image.src = data;
+        });
     </script>
 </body>
 </html>
